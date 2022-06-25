@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .top{
+           background-color: #424245;
+           height: 45px;
+           position: fixed;
+        }
+        .top>div:nth-child(1){
+            width: 55%;
+            height: 98%;
+            margin: auto;
+        }
+        .nav{
+            display: grid;
+            grid-template-columns: repeat(13,1fr);
+            grid-template-rows: 45px;
+            gap: 10px;
+           
+        }
+        .nav>div>a>img{
+            width:35%;
+           padding-top: 6px;
+          padding-left: 25px;
+          opacity: 70%;
+          
+        }
+        .nav>div>a>img:hover{
+            opacity: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav>div>a>p{
+            color: #dddddd;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 100;
+            opacity: 85%;
+        }
+        .nav>div>a>p:hover{
+            color: white;
+        }
+      #bac{
+          height: 42px;
+          background-color: #424245;
+          
+      }
+      #sea{
+          border: none;
+          background: none;
+          outline: none;
+          padding: 0;
+          transition: 0.4s;
+          width: 0;
+          float: right;
+          margin: 10px;
+          
+      }
+     
+      #bac:hover{
+        margin-left: -900px;
+        position: absolute;
+        transition: 0.4s;
+      }
+      #bac:hover > #sea{
+          width: 1000px;
+          background-color: #424245;
+          height: 43px;
+          padding: 0;
+          margin: 0;
+          color: white;
+          font-size: 17px;
+          margin-left: 20px;
+          
+      }
+      ::placeholder{
+          font-size: 17px;
+      }
+      .btn{
+       color: #dddddd;
+       font-size: 16px;
+       opacity: 80%;
+      }
+      .btn:hover{
+          color: white;
+      }
+      .fas{
+          margin-top: 14px;
+          margin-left: 25px;
+      }
+      .fa-bag-shopping{
+          color: white;
+          margin-top: 11px;
+          font-size: 17px;
+          opacity: 70%;
+          margin-left: 25px;
+      }
+      .fa-bag-shopping:hover{
+          opacity: 100%;
+      }
+      .emi{
+          background-color: #f5f5f5;
+          height: 80px;
+          
+      }
+      .emi>p{
+         
+          text-align: center; 
+           line-height: 130px;
+          font-size: 15px;
+         
+      }
+      .main{
+          height: 800px;
+          background-color: #fbfbfd;
+      }
+      .main>a>img{
+          width: 100%;
+          margin-top: 80px;
+      }
+      .main>h1{
+       text-align: center;
+       font-size: 70px; 
+       padding-top: 90px;
+      }
+.main>p{
+    text-align: center;
+    font-size: 30px;
+}
+.fle{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 15%;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 20px; 
+}
+a>p{
+    color: #06c;
+}
+.fle>a>p:hover{
+    text-decoration: underline;
+}
+.sec{
+    
+    margin-top: 10px;
+    height: 700px;
+    background-color: #fbfbfd;
+}
+.sec>p{
+   text-align: center;
+   font-size: 25px;
+   font-weight: 500;
+   padding: 15px;
+}
+.sec>div{
+  width: 11%;
+  margin: auto;
+}
+.sec>p:nth-child(3){
+    font-size: 27px;
+}
+.secfle{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 15%;
+    justify-content: space-around;
+    margin: auto;
+    padding-top: 10px;
+    font-size: 20px; 
+}
+.secfle>a>p{
+    color: #06c;
+}
+.hero>img{
+    width: 100%;
+    margin-top: 20px;
+}
+.third{
+    height: 617px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 617px;
+    background-color: black;
+}
+.cent{
+    width: 50%;
+    margin: auto;
+   margin-top: 255px;
+   margin-right: 50px;
+}
+.air{
+    padding-left: 150px;
+}
+.cent>p{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+}
+.other{
+    width: 100%; 
+}
+.thifl{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    width: 70%;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 20px; 
+}
+.thifl>a>p{
+    color: #06c;
+}
+.four{
+    margin: 1%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,900px);
+    grid-template-rows: repeat(3,700px);
+    gap: 25px;
+    justify-content: center;
+}
+.wid{
+   width: 100%;
+   height: 100%;
+}
+.font_top{
+    margin-top: -250px;
+    color: white;
+    font-size: 20px;
+    width: 42%;
+    text-align: center;
+   margin-left: 270px;
+}
+.font_top>p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.font_sec{
+    margin-top: -650px;
+    font-size: 20px;
+    width: 42%;
+    text-align: center;
+   margin-left: 270px;
+}
+.font_sec>p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lea{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    font-size: 20px; 
+    width: 60%;
+    margin: auto;
+    justify-content: space-around;
+}
+.iph_fot{
+    margin-top: 391px;
+    margin-left: 160px;
+}
+.font_thi{
+    margin-top: -550px;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+   margin-left: 270px;
+}
+.font_thi>p:nth-child(1){
+   font-size: 18px;
+   color: rgb(223, 82, 0);
+   font-weight: bold;
+}
+.font_thi>p:nth-child(3){
+    margin: 10px;
+    margin-bottom: 10px;
+}
+.con{
+    margin-top: 350px;
+    font-size: 20px;
+    text-align: center;
+}
+.foot{
+    background-color: #f3f3f7;
+}
+.footer{
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    font-size: 12px;
+    line-height: 18px;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+table{
+    width: 100%;
+   
+    text-align: left;
+    margin: auto;
+}
+.f{
+    color: #06c;
+}
+.hrr{
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+.copy{
+    display: flex;
+}
+.copy>p:nth-child(2){
+    margin-left: 20px;
+}
+.copy>p:nth-child(3){
+    margin-left: 320px;
+}
+  </style>
+</head>
+<body>
+    <div class="top">
+        <div>
+            <div class="nav">
+             <div><a href="nav.html"><img src="image/apple_img.png" alt=""></a></div>
+             <div><a href=""><p>Store</p></a></div>
+             <div><a href=""><p>Mac</p></a></div>
+             <div><a href=""><p>iPad</p></a></div>
+             <div><a href=""><p>iPhone</p></a></div>
+             <div><a href=""><p>Watch</p></a></div>
+             <div><a href=""><p>AirPods</p></a></div>
+             <div><a href=""><p>TV & Home</p></a></div>
+             <div><a href=""><p>Only on Apple</p></a></div>
+             <div><a href=""><p>Accessories</p></a></div>
+             <div><a href=""><p>Support</p></a></div>
+             <div>
+                 <div id="bac">
+                 <input type="text" name="search" placeholder="Search apple.com" id="sea">
+                 <a class="btn" href="#">
+                    <i class="fas fa-search"></i>
+                 </a>
+                </div>
+                </div>
+             <div><a class="bag" href="">
+                <i class="fa-solid fa-bag-shopping"></i>
+               
+             </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="emi">
+       <p>Get No Cost EMI for 3 or 6 months with qualifying Credit Cards from most leading banks.</p>
+    </div>
+
+    <!-- main section -->
+
+    <div class="main">
+        <h1>iPhone 13 Pro</h1>
+        <p>Oh.So.Pro</p>
+        <div class="fle">
+         <a href=""><p>Learn &gt;</p></a>
+         <a href=""><p>Buy &gt;</p></a>
+        </div>
+       <a href=""><img src="image/iphone13.png" alt=""></a>
+    </div>
+    <div class="sec">
+      <p>The new</p>
+      <div> <img src="image/iphone.png" alt=""></div>
+      <p>Love the power.Love the price.</p>
+      <div class="secfle">
+        <a href=""><p>Learn &gt;</p></a>
+        <a href=""><p>Buy &gt;</p></a>
+       </div>
+       <a class="hero" href=""><img src="image/hero_tab.jpg" alt=""></a>
+    </div>
+    <div class="third">
+        <div>
+            <div class="cent">
+                <a href=""><img class="air" src="image/air.png" alt=""></a>
+                <p>Light.Bright.Full of might.</p>
+                <div class="thifl">
+                <a href=""><p>Learn more &gt;</p></a>
+                <a href=""><p>Buy &gt;</p></a>
+                </div>
+            </div>
+        </div>
+        <div><a href=""><img class="other" src="image/otheripad.jpg" alt=""></a></div>
+    </div>
+
+    <div class="four">
+     <div><a href=""><img class="wid" src="image/prom.jpg" alt=""></a>
+    <div class="font_top">
+       <img src="image/wwdc22.png" alt="">
+       <p>The Worldwide Developers Conference is coming. Join us online from 6 to 10 June</p>
+       <a href=""><p>Learn more &#8599;</p></a>
+    </div>
+    </div>
+     <div><a href=""><img class="wid" src="image/watch.jpg" alt=""></a>
+    <div class="font_sec">
+     <img src="image/ipwatch.png" alt="">
+     <p>It's our largest display yet.</p>
+     <div class="lea">
+        <a href=""><p>Learn &gt;</p></a>
+        <a href=""><p>Buy &gt;</p></a>
+     </div>
+    </div>
+    </div>
+     <div><a href=""><img class="wid" src="image/char.jpg" alt=""></a>
+        <div class="font_sec">
+            <h1>Mac Studio</h1>
+            <p>Empower station.</p>
+            <div class="lea">
+               <a href=""><p>Learn &gt;</p></a>
+               <a href=""><p>Buy &gt;</p></a>
+            </div>
+           </div>
+    </div>
+     <div><a href=""><img class="wid" src="image/13.jpg" alt=""></a>
+        <div class="font_sec">
+           <h1>iPhone 13</h1>
+            <p>Your new superpower.</p>
+            <div class="lea">
+               <a href=""><p>Learn &gt;</p></a>
+               <a href=""><p>Buy &gt;</p></a>
+            </div>
+           </div>
+    </div>
+     <div class="bac"><a href=""><img class="iph_fot" src="image/13pro11pro.jpg" alt=""></a>
+        <div class="font_thi">
+               <p>Now until May 31</p>
+               <h1>Enjoy great savings and extra credit.</h1>
+            <p>Benefit from incredible savings <br> and more credit with Apple Trade In.</p>
+            <div class="lea">
+               <a href=""><p>Learn more &gt;</p></a>
+            </div>
+           </div>
+    </div>
+     <div><a href=""><img class="wid" src="image/walkman.png" alt=""></a>
+        <div class="font_sec">
+            <img src="image/tv+.png" alt="">
+           </div>
+           <div class="con">
+               <img src="image/conn.png" alt="">
+           </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <div class="foot">
+        <div class="footer">
+     <p>‡No-Cost EMI available for purchases made using qualifying credit cards on 3 or 6 month tenures only. Minimum order spend applies as per your credit card’s issuing bank threshold. Offer cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Credit card eligibility is subject to terms and conditions between you and your credit card issuing bank. Offer may be revised or withdrawn at any time without any prior notice. Terms & conditions apply.</p>
+     <br>
+     <p>Representative example: Based off a 6 month tenure. ₹69900 total cost includes 15% p.a. and No Cost EMI savings of ₹2959, paid over 6 months as 6 monthly payments of ₹11650.</p>
+     <br>
+    <li type="1">
+       Get extra trade-in credit when you trade in an eligible iPhone or smartphone and purchase a new Apple device until 31 May 2022. The extra trade-in credit may range up to ₹3000 for iPhone, and from ₹1000 to ₹4000 for eligible smartphones. Additional terms from Apple or Apple’s trade-in partners may apply.
+    </li>
+    <hr>
+    <table>
+        <tr>
+            <th>Shop and Learn</th>
+            <th>Services</th>
+            <th>Apple Store</th>
+            <th>For Business</th>
+            <th>Apple Values</th>
+        </tr>
+        <tr>
+            <td>Store</td>
+            <td>Apple Music</td>
+            <td>Ways to Buy</td>
+            <td>Apple and Bussiness</td>
+            <td>Accessibility</td>
+        </tr>
+        <tr>
+            <td>Mac</td>
+            <td>Apple TV+</td>
+            <td>Apple Trade In</td>
+            <td><td>Environment</td></td>
+        </tr>
+        <tr>
+            <td>iPad</td>
+            <td>Apple Arcade</td>
+            <td>Recycling Programme</td>
+            <th>For Education</th>
+            <td>Privacy</td>
+        </tr>
+        <tr>
+            <td>iPhone</td>
+            <td>iCould</td>
+            <td>Order Status</td>
+            <td>Apple and Education</td>
+            <td>Supplier Responsibility</td>
+            
+        </tr>
+        <tr>
+            <td>Watch</td>
+            <td>Apple One</td>
+            <td>Shopping Help</td>
+            <td>Shop for Education</td>
+            <th>About Apple</th>
+        </tr>
+        <tr>
+            <td>AirPod</td>
+            <td>Apple Books</td>
+            <td></td>
+            <td>Shop for University</td>
+            <td>Newsroom</td>
+        </tr>
+        <tr>
+            <td>TV & Home</td>
+            <td>Apple Podcasts</td>
+            <td></td>
+            <td><td>Apple Leadership</td></td>
+           
+        </tr>
+        <tr>
+            <td>iPod touch</td>
+            <td>App Store</td>
+            <td></td>
+            <th>For Healthcare</th>
+            <td>Career Opportunities</td>
+            
+        </tr>
+        <tr>
+            <td>AirTag</td>
+          <td></td>
+          <td></td>
+            <td>Apple in Healthcare</td>
+            <td>Investors</td>
+        </tr>
+        <tr>
+            <td>Accessories</td>
+            <th>Account</th> 
+            <td><td>Health on Apple Watch</td></td>
+            <td>Ethics & Compliance</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Manage Your Apple ID</td>
+            <td><td><td>Events</td></td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Apple Store Account</td>
+            <td><td><td>Contact Apple</td></td></td>
+        </tr>
+        <tr>
+            <td><td>iCloud.com</td></td>
+        </tr>
+    </table>
+    <br>
+    <p>More ways to shop: <a class="f" href="">Find a retailer</a> near you. Or call 000800 040 1966.</p>
+    <hr class="hrr">
+    <div class="copy">
+        <p>Copyright © 2022 Apple Inc. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map</p>
+        <p>India</p>
+    </div>
+</div>
+    </div>
+</body>
+</html>
